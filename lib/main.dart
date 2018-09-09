@@ -1,12 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_study/WhatsAppHome.dart';
-import 'package:camera/camera.dart';
-
-List<CameraDescription> cameras;
+import 'package:battery/battery.dart';
+import 'package:flutter_study/BatteryHomePage.dart';
 
 Future<Null> main() async {
-  cameras = await availableCameras();
   runApp(new MyApp());
 }
 
@@ -17,11 +15,11 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Whats App',
       theme: new ThemeData(
-        primaryColor: new Color(0xff075E54),
-        accentColor: new Color(0xff25D366),
+        primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: new WhatsAppHome(cameras),
+//      home: new WhatsAppHome(),
+    home: new BatteryHomePage(title: 'Flutter demo home page'),
     );
   }
 }

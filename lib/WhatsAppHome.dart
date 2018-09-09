@@ -9,9 +9,6 @@ import 'package:flutter_study/pages/StatusScreen.dart';
  * */
 
 class WhatsAppHome extends StatefulWidget {
-  var cameras;
-
-  WhatsAppHome(this.cameras);
 
   @override
   State<StatefulWidget> createState() => new _WhatsAppHomeState();
