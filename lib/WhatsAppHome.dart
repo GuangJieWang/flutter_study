@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/pages/CameraScreen.dart';
 import 'package:flutter_study/pages/CallsScreen.dart';
 import 'package:flutter_study/pages/ChatScreen.dart';
 import 'package:flutter_study/pages/StatusScreen.dart';
@@ -37,8 +36,9 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
           controller: _tabController,
           indicatorColor: Colors.white,
           tabs: <Widget>[
-            new Tab(icon: new Icon(Icons.camera_alt)),
-            new Tab(text: "CHATS"),
+            new Tab(
+            text: "CHATS"
+            ),
             new Tab(
               text: "STATUS",
             ),
@@ -56,13 +56,14 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
         ],
       ),
       body: new TabBarView(controller: _tabController, children: <Widget>[
-        new CameraScreen(widget.cameras),
         new ChatScreen(),
         new StatusScreen(),
         new CallsScreen(),
       ]),
       floatingActionButton: new FloatingActionButton(
-        backgroundColor: Theme.of(context).accentColor,
+        backgroundColor: Theme
+            .of(context)
+            .accentColor,
         child: new Icon(
           Icons.message,
           color: Colors.white,
